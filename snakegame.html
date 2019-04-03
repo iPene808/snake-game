@@ -2,6 +2,19 @@
   <title> Snake Game </title>
   <canvas id= "snakeGarden" width= "1000" height= "800"></canvas>
 
+  <script>
+    var canvas;
+    var canvasContext;
+
+    window.onload = function() {
+      console.log("Hello World");
+      canvas = document.getElementById('snakeGarden');
+      canvasContext = canvas.getContext('2d');
+      canvasContext.fillstyle = 'green';
+      canvasContext.fillRect(0,0,canvas.width,canvas.height);
+    }
+
+  </script>
 
 
 </html>
