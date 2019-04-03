@@ -1,5 +1,5 @@
 # snake-game
-This is my version of a game most of us have played long
+This is my version of a game some of us have played long
 before the days of Smart Phones and glass screen devices: Snake
 
 In this game, I will be developing my knowledge and usage of Javascript
