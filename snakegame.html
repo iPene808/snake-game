@@ -1,20 +1,38 @@
+<!doctype html>
 <html>
   <title> Snake Game </title>
-  <canvas id= "snakeGarden" width= "1000" height= "800"></canvas>
+  <head><h1>Snake Game</h1></head>
+  <canvas id= "snakeGarden" width= "800" height= "600"></canvas>
 
   <script>
     var canvas;
     var canvasContext;
+    var snakeX = 50
 
-    window.onload = function() {
-      console.log("Hello World");
+
+    window.onload = function gameCanvas() {
       canvas = document.getElementById('snakeGarden');
       canvasContext = canvas.getContext('2d');
-      canvasContext.fillstyle = 'green';
+
+      var framesPerSecond = 30;
+      setInterval(function() {
+        drawEverything();
+        moveEverything();
+      }, 1000/framesPerSecond);
+    }
+    function drawEverything() {
+      canvasContext.fillStyle = 'aquamarine';
       canvasContext.fillRect(0,0,canvas.width,canvas.height);
+      canvasContext.fillStyle = 'white';
+      canvasContext.fillRect(snakeX,275,50,25);
+    }
+    function moveEverything() {
+      snakeX = snakeX + 15;
     }
 
   </script>
 
 
+
 </html>
+
