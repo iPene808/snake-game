@@ -1,6 +1,7 @@
 var canvas;
 var canvasContext;
 var snakeX = 50
+var appleX = 600
 
 window.onload = function gameCanvas() {
 canvas = document.getElementById('snakeGarden');
@@ -20,6 +21,7 @@ function moveEverything() {
 function drawEverything() {
   colorRect(0,0,canvas.width,canvas.height, 'aquamarine');
   colorRect(snakeX,275,50,25, 'white');
+  colorRect(appleX,275,25,25, 'red')
 }
 
 function colorRect(leftX,topY, width, height, drawColor) {
