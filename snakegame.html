@@ -16,18 +16,23 @@
 
       var framesPerSecond = 30;
       setInterval(function() {
-        drawEverything();
         moveEverything();
+        drawEverything();
       }, 1000/framesPerSecond);
     }
-    function drawEverything() {
-      canvasContext.fillStyle = 'aquamarine';
-      canvasContext.fillRect(0,0,canvas.width,canvas.height);
-      canvasContext.fillStyle = 'white';
-      canvasContext.fillRect(snakeX,275,50,25);
-    }
+
     function moveEverything() {
       snakeX = snakeX + 15;
+    }
+
+    function drawEverything() {
+      colorRect(0,0,canvas.width,canvas.height, 'aquamarine');
+      colorRect(snakeX,275,50,25, 'white');
+    }
+
+    function colorRect(leftX,topY, width, height, drawColor) {
+      canvasContext.fillStyle = drawColor;
+      canvasContext.fillRect(leftX,topY, width, height);
     }
 
   </script>
@@ -35,4 +40,3 @@
 
 
 </html>
-
